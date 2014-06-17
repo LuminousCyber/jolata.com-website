@@ -1,0 +1,138 @@
+/*==========================================================================
+  5. NAVIGATION
+========================================================================== */
+	.navigation{
+		
+		ul{
+			width: auto;
+			float:right;
+			zoom:1;
+			&:before, &:after{
+				content: "";
+				display: table;
+			}
+			&:after{
+				clear: both;
+			}
+
+			li {
+				float: left;
+				position: relative;
+
+				&:hover > a, &.active > a {
+					color:white;
+				}
+
+				&:hover > ul {
+					opacity: 1;
+					visibility: visible;
+					margin: 0;
+				}
+			}
+
+			a {
+				float: left;
+				padding: 7px 40px;
+				border:1px solid transparent;
+				color:#818285;
+				text-transform: uppercase;
+				font: 14px "arial", sans-serif;
+				line-height:1.5em;
+				text-decoration: none;
+				@include prefixed(transition, all 0.3s linear);
+			}
+
+			ul {
+				margin: 20px 0 0 0;
+				_margin: 0; /*IE6 only*/
+				opacity: 0;
+				visibility: hidden;
+				position: absolute;
+				top: 38px;
+				left: 0;
+				z-index: 1;
+				background: #3d454e;
+				
+				-webkit-transition: all .2s ease-in-out;
+				-moz-transition: all .2s ease-in-out;
+				-ms-transition: all .2s ease-in-out;
+				-o-transition: all .2s ease-in-out;
+				transition: all .2s ease-in-out;
+
+				a {
+					padding: 10px;
+					width: 180px;
+					_height: 10px; /*IE6 only*/
+					display: block;
+					white-space: nowrap;
+					float: none;
+					text-transform: none;
+					color:white;
+					border:none;
+
+					&:hover {
+						background-color: #598527;
+						color:white;
+						border:none;
+					}
+				}
+
+				li {
+					float: none;
+					display: block;
+					border: 0;
+					_line-height: 0; /*IE6 only*/
+
+
+					&:last-child {
+						-moz-box-shadow: none;
+						-webkit-box-shadow: none;
+						box-shadow: none;
+					}
+				}
+				ul {
+					top: 0;
+					left: 150px;
+					margin: 0 0 0 20px;
+					_margin: 0; /*IE6 only*/
+					-moz-box-shadow: -1px 0 0 rgba(255,255,255,.3);
+					-webkit-box-shadow: -1px 0 0 rgba(255,255,255,.3);
+					box-shadow: -1px 0 0 rgba(255,255,255,.3);
+				}
+			}
+		}
+	}
+
+	.js .navigation {
+		position: relative;
+	}
+	/*.js .navigation.closed {
+		max-height:100%;
+	}*/
+	.nav-toggle {
+	  position:relative;
+	  z-index:9999;
+	  width: auto;
+	  height: 22px;
+	  padding-right: 42px;
+	  margin-bottom: 10px;
+	  
+	  text-align:right;
+	  font-size: 18px;
+	  color:#3d454e;
+	  overflow: hidden;
+	  background: transparent url("../img/hamburger.png") no-repeat right top;
+
+	  -webkit-touch-callout: none;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+
+	  &:hover{
+	  	text-decoration:none;
+	  }
+	}
+	.nav-toggle {
+		display: none;
+	}

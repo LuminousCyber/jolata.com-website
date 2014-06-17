@@ -1,0 +1,283 @@
+/*==========================================================================
+  8. COMPANY
+========================================================================== */
+
+/* ======== COMPANY BIG BANNER ======== */
+#cop-bigbaner{
+	background:white;
+	color:#e6e7e8;
+	.imgSide{
+		background:white image-url("company.png") center top no-repeat;
+		@include min-height(693px);
+		.desc{
+			padding-top:115px;
+			width:50%;
+			color:#e6e7e8;
+			h1{
+				font-size:80px;
+				color:#e6e7e8;
+				margin:0;
+				margin-bottom:60px;
+			}
+			p{
+				font-weight:300;
+				font-size:34px;
+				line-height:1.1em;
+			}
+		}
+	}
+
+	.wt-desc{
+		background:white;
+		font-weight:300;
+		font-size:24px;
+		color:#282D2B;
+		padding:60px 0;
+	}	
+}
+
+/* ======== MANAGEMENT ======== */
+#management{
+	background:#8DC53F;
+	color:white;
+	margin:0 auto;
+
+	.textdesc{
+		font-size:26px;
+		font-weight:300;
+	}
+
+	.peoples{
+		width:83%;
+		margin:0 auto;
+		text-align:center;
+		a{
+			color:white;
+			&:hover{
+				text-decoration:none;
+			}
+		}
+		.item{
+			float:left;
+			figure{
+				display:block;
+				margin:0 auto;
+				margin-bottom:15px;
+				width:174px;
+				position:relative;
+
+				&.active{
+					.olay{
+						visbility: visible;
+						@include opacity(1);
+					}
+				}
+			}
+
+			.olay{
+				@include opacity(0);
+				visbility: hidden;
+				position:absolute;
+				top: 50%;
+   				left: 50%;
+   				z-index:5;
+   				margin-left:-86px;
+   				margin-top:-86px;
+				@include size(174px, 174px);
+				border:3px solid white;
+				background:black;
+				color:white;
+				text-align:center;
+				font-size:18px;
+				@include border-radius(50%);
+				@include prefixed(transition, all 0.3s ease);
+
+				span{
+					display:table-cell;
+					vertical-align:middle;
+					@include size(170px, 174px);
+					margin:0 auto;				
+					height:174px
+				}
+			}
+
+			&.active{
+				.olay{
+					@include opacity(1);
+					visbility: visible;
+				}
+			}
+		}
+		
+		.desc{
+			font-size:18px;
+			strong{
+				font-size:22px;
+				font-weight:400;
+			}
+		}
+	}
+
+	
+	/*GRID ADD*/
+	.og-expander{
+		background:transparent;
+		color:white;
+	}
+	.og-expander-inner{
+		text-align:left;
+		width:93%;
+		max-width:1022px;
+		margin:0 auto;
+		padding:0;
+	}
+	.og-fullimg, .og-details{
+		height:auto;
+		width:100%;
+		color:white;
+		float:none;
+	}
+
+	.og-details {
+		font-size:25px;
+		font-weight:300;
+		
+		h3{
+			padding:0;
+			font-size:34px;
+			font-weight:400;
+			margin:0;
+			text-align:center;
+			margin-top:18px;
+		}
+		strong{
+			display:block;
+			margin-bottom:20px;
+			font-weight:300;
+			font-size:26px;
+			text-align:center;
+		}
+		p{
+			color:white;
+			font-size:25px;
+			line-height:1.3em;
+			font-weight:300;
+			padding-top:20px;
+			margin-top:20px;
+			border-top:1px solid white;
+		}
+		a{
+			display:none;
+		}
+	}
+	.og-close{
+		right:auto;
+		left:190px;
+		z-index:999;
+	}
+	.og-close::before, .og-close::after{
+		height:4px;
+	}
+
+	.lines{
+		position:relative;
+		z-index:0;
+		display:block;
+		margin-top:60px;
+		margin-left: -18px;
+    	margin-right: -15px;
+		float:left;
+		@include size(90px, 49px);
+		background:transparent image-url("line.png") 0 0 no-repeat;
+
+		&.two{
+			background:transparent image-url("line2.png") 0 0 no-repeat;
+			margin-left: -11px;
+    		margin-right: -19px
+		}
+	}
+}
+
+/* ======== CAREERS ======== */
+#careers{
+	background:#282b2d;;
+	font-size:24px;
+	font-weight:300;
+	color:#e6e7e8;
+	.title-medalt{
+		color:#e6e7e8;
+	}
+
+	.btnlist{
+		margin:40px 0;
+		li{
+			@include inline-block();
+			margin:8px 30px;
+
+			&:first-child{
+				margin-left:0;
+			}
+			&:last-child{
+				margin-right:0;
+			}
+		}
+	}
+
+	.btn-grey{
+		font-size:24px;
+		color:#D0D2D3;
+		font-weight:400;
+		text-transform:none;
+		@include min-width(330px);
+		line-height: 1em;
+		padding: 13px 20px 16px 20px;
+
+		&.noleft{
+			margin-left:0;
+		}
+	}
+}
+
+.btn-green{
+	border:none;
+	background:none;
+	color:white;
+	text-align:center;
+	font-weight:400;
+	font-size:25px;
+	background:#8dc63f;
+	@include min-width(350px);
+	@include inline-block();
+	padding: 8px 25px 14px 25px;
+	@include prefixed(transition, all 0.2s linear);
+	@include border-radius(3px);
+	&:hover{
+		@include opacity(0.7);
+		text-decoration:none;
+		color:white;
+	}
+}
+
+/* ======== CONTACT ======== */
+
+#contact{
+	background:#1d2225 image-url("Jolata_Logo_bottomOFCompanyPage-01.png") bottom right no-repeat;
+	@include min-height(550px);
+	color:#bbbdbf;
+	font-size:23px;
+	font-weight:300;
+	.small{
+		font-size:16px;
+	}
+	.mail{
+		span{
+			@include inline-block();
+			color:#8dc342;
+			background:transparent image-url("mail.png") left top no-repeat;
+			padding-left:65px;
+			font-weight:300;
+			font-size:18px;
+			margin-top:10px;
+		}
+	}
+}

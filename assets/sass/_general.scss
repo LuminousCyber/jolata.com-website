@@ -1,0 +1,63 @@
+/*==========================================================================
+  3. GENERAL
+========================================================================== */
+.txt-ltgrey{
+	color:#D1D3D4;
+}
+
+.drkgrey{
+	padding:50px 0;
+	background:#282b2d;
+	color:#e6e7e8
+}
+.green{
+	color:#8DC63F;
+}
+
+.secrow{
+	padding-top:80px;
+	padding-bottom:60px;	
+}
+
+.title-med{
+	font-size:37px;
+	font-weight:300;
+	color:#e6e7e8;
+	margin:0;
+	margin-bottom:60px;
+}
+
+.title-medalt{
+	@extend .title-med;
+	margin-bottom:28px;
+}
+.btn-grey{
+	@include inline-block();
+	background:none;
+	text-align: center;
+	border:none;
+	background:#58595B;
+	@include prefixed(transition, all .2s linear);
+	color:white;
+	text-transform:uppercase;
+	padding:5px 20px;
+	@include border-radius(3px);
+	&.lg{
+		font-size:21px;
+		@include border-radius(3px);
+		font-weight:300;
+		padding: 8px 38px;
+	}
+	&:hover{
+		background:#8DC63F;
+		color:white;
+		text-decoration:none;
+	}
+	figure{
+		text-align:center;
+	}
+}
+
+.btn-greysq{
+	
+}

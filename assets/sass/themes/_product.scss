@@ -1,0 +1,137 @@
+/*==========================================================================
+  7. PRODUCTS
+========================================================================== */
+#prodBaner{
+	background:white;
+	overflow:hidden;
+	padding:108px 0;
+	.desc{
+		text-align:right;
+		text-transform:uppercase;
+		padding-top:50px;
+	}
+	h2{
+	 	font-size:45px;
+	 	color:#282D2B;
+	 	line-height:1.1em;
+	 	margin:0;
+	 	margin-bottom:50px;
+	}
+	p{
+		font-weight:300;
+		font-size:36px;
+	}
+}
+
+/* ======== ADVANTAGES ======== */
+#advantages{
+	background:#282b2d;	
+}
+.textadv{
+	font-size: 28px;
+	font-weight: 300;
+	color: #e6e7e8;
+	line-height: 1.1em;
+	margin-bottom:60px;
+}
+
+.listadv{
+	text-align:center;
+	.inner{
+		width:92%;
+		margin:0 auto;
+	}
+	h5{
+		font-size:32px;
+		margin:0;
+		text-transform:uppercase;
+		color:#e6e7e8;
+		margin-bottom:28px;
+		font-weight:300;
+	}
+	figure{
+		margin-bottom:28px;
+	}
+	p{
+		font-size:18px;
+		color:#BCBEC0;
+	}
+}
+
+
+/* ======== READY TO SOLVE ======== */
+#rt-solve{	
+	background:white;
+	.title-med{
+		color:#1D2225;
+	}
+	.desc{
+		p{
+			font-size:18px;
+			color:1D2225;
+			font-weight:300;
+			margin-bottom:33px;
+
+			strong{
+				font-weight:400;
+				display:block;
+				text-transform:uppercase;
+			}
+		}
+	}
+	figure{
+		padding-top:103px;
+		text-align:center;
+	}
+}
+
+
+/* ======== HOW IT WORKS ======== */
+#ht-works{
+	background:#8dc443;
+	color:white;
+	.workstext{
+		font-size:23px;
+		font-weight:300;
+		margin:0;
+		margin-bottom:60px;
+	}
+	.title-med{
+		color:white;
+		margin-bottom:30px;
+	}
+
+	figure{
+		text-align:center;
+	}
+}
+
+.listbg-numb{
+	
+	li{
+		overflow:hidden;
+		display:block();
+		margin-bottom:50px;	
+	}
+	.bgnumb{
+		float:left;
+		color:#a3ce67;
+		font-size:110px;
+		font-weight:700;
+		@include inline-block();
+		line-height:0.8em;
+		margin-right:15px;
+	}
+	.desc{
+		overflow:hidden;
+		font-size:16px;
+		font-weight:300;
+
+		strong{
+			display:block;
+			font-weight:300;
+			font-size:23px;
+			text-transform:uppercase;
+		}
+	}
+}
