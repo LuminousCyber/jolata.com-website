@@ -629,6 +629,11 @@ img {
 #management .peoples .item {
   float: left;
 }
+
+#management .peoples .shift {
+  margin-left: 85px;
+}
+
 #management .peoples .item figure {
   display: block;
   margin: 0 auto;
@@ -757,6 +762,9 @@ img {
   height: 49px;
   background: transparent url('../img/line.png?1402155789') 0 0 no-repeat;
 }
+
+
+
 #management .lines.two {
   background: transparent url('../img/line2.png?1402186194') 0 0 no-repeat;
   margin-left: -11px;
@@ -979,8 +987,8 @@ img {
 
 .og-fullimg img {
   display: inline-block;
-  max-height: 100%;
-  max-width: 100%;
+  max-height: 25%;
+  max-width: 25%;
 }
 
 .og-details h3 {
