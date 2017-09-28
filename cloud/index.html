@@ -65,8 +65,7 @@ The traditional way for customers to get visibility is to collect packet capture
 <p>
 The ideal way to troubleshoot a problem is to synchronize captures across the VMs and sites, then correlate those captures to see the traffic across an entire network for all the applications. Up until now, there have been huge technical challenges to obtaining, synchronizing and correlating packet captures across different locations in the cloud. Without direct access to the host’s network interfaces, packets are reassembled into each VM differently. This means you cannot correlate traffic between VMs using Wireshark as in Figure 1:
       </p>
-                <img src="../assets/img/azure_1.png" alt="Figure 1">  Figure 1
-  <figure ><img src="../assets/img/azure_1.png" alt=""">  Figure 1</figure>
+                <img src="../assets/img/azure_1.png" align="middle" alt="Figure 1">  Figure 1
 <p>
 
 Various TCP reassembly offload functions either in the host system or in the VM kernel receive packets that are much larger in size than what can be sent on the wire. These offloads include Generic Receive Offload (GRO), Large Receive Offload (LRO), and possible HW TCP offload engines (TOE). These offloads run independent of the transmit side and therefore result in variations in packet sizes received by packet capture tools like tcpdump. If you are trying to correlate packets, then it is very problematic. The 
