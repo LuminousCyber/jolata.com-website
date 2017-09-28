@@ -72,7 +72,8 @@ The ideal way to troubleshoot a problem is to synchronize captures across the VM
 <p>
 
 Various TCP reassembly offload functions either in the host system or in the VM kernel receive packets that are much larger in size than what can be sent on the wire. These offloads include Generic Receive Offload (GRO), Large Receive Offload (LRO), and possible HW TCP offload engines (TOE). These offloads run independent of the transmit side and therefore result in variations in packet sizes received by packet capture tools like tcpdump. If you are trying to correlate packets, then it is very problematic. The 
-  2 illustrates:
+Figure  2 illustrates:
+<figure><img src="../assets/img/azure_2.png" alt="">      Figure 2</figure>
 </p>
 <p>
 
@@ -92,6 +93,7 @@ For the public cloud, Microsoft Azure offers Network Watcher. Azure Network Watc
 <p>
 Figure 3 shows how the user would utilize this technology:
 </p>
+<figure><img src="../assets/img/azure_3.png" alt="">     Figure 3</figure>    
 <p>
 If you are interested in trying out Jolata TruFlow in analyzing your netwatcher capture files, please register <a href="http://signup.jolata.info">here</a> at <a href="http://signup.jolata.info">http://signup.jolata.info</a> to show your interest. You can also email us at <a mailto="azure@jolata.com">azure@jolata.com</a>.
 </p>
@@ -104,12 +106,14 @@ Use case #1: Topology Optimization
 In some hybrid cloud deployments, the application topologies may be set up as a hub-and-spoke model in order to control traffic flows between different applications or users. Essentially, centralizing the security between the applications with an on-premise controlled firewall. While this may ensure complete control over the security, it can create a significant bottleneck for traffic to always transit through the on-premise nodes between different cloud domains. Visualizing and understanding the impact of this topology can easily be seen by utilizing TruFlow in conjunction with Network Watcher. Upon capturing packets utilizing Network Watcher at 4 locations with active traffic and utilizing the spatial map view of TruFlow’s UI, it is easy to see the latency and hence, performance impact of utilizing the Jolata office as a transit node.
 As you can see there is excess latency going through the transit node due to WAN bandwidth bottlenecks. One solution could be to increase the WAN bandwidth. The other solution could be to directly connect multiple cloud domains with a VNet. When utilizing VNet, there is a significant decrease in network latency that would result in an increase in application performance.
 </p>
-<p>
+                          <figure><img src="../assets/img/azure_4.png" alt="">          Figure 4 -> Use Case 1</figure>
+    <p>
 Use case #2: Elephant flow control
 
 Often you have applications that can misbehave by consuming too much bandwidth for a given period of time, dubbed an “elephant flow”. These flows are disruptive to the other applications trying to use the network and can cause excess latency to build-up resulting in application performance issues. TruFlow can see these elephant flows in real-time and enabling them to be identified and blocked. The figure below illustrates.
 </p>
-<p>
+                                      <figure ><img src="../assets/img/azure_5.png" alt="">  Figure 5 -> Use Case 2</figure>
+ <p>
 By utilizing Network Security Groups (NSG), a component of Network Watcher, the flows can be configured to be blocked from that particular VM to ensure other applications are not impacted.
 </p>
 <p>
@@ -118,6 +122,7 @@ Furthermore, Loss, latency, throughput, etc. can viewed for each connection at t
 <p>
 In summary, enterprises are moving to hybrid cloud architectures with highly distributed applications. The dependency on having a reliable network is ever increasing for revenue streams. Current tools lack in the ability to fully visualize and troubleshoot the network. Jolata TruFlow provides a unique ability to visualize an entire hybrid cloud deployment in real-time or offline. Utilizing Network Watcher in conjunction with TruFlow enables on-demand analysis of historical packet captures for detailed troubleshooting of network issues in an automated way. To show interest in utlizing Jolata with Network Watcher signup here at <a href="http://signup.jolata.info">http://signup.jolata.info</a>.
 </p>
+    
 
               </div>
                           <figure class="col-md-7"  style="PADDING-TOP: 850px"><img src="../assets/img/azure_1.png" alt=""">  Figure 1</figure>
