@@ -98,14 +98,14 @@ If you are interested in trying out Jolata TruFlow in analyzing your netwatcher 
 Here are some key use cases that are normally difficult to debug, but are now easy with Microsoft Azure Network Watcher and Jolata’s TruFlow platform.
 </p>
 <p>
-Use case #1: Topology Optimization
+  <strong>Usecase #1: Topology Optimization</strong>
 <br>
 In some hybrid cloud deployments, the application topologies may be set up as a hub-and-spoke model in order to control traffic flows between different applications or users. Essentially, centralizing the security between the applications with an on-premise controlled firewall. While this may ensure complete control over the security, it can create a significant bottleneck for traffic to always transit through the on-premise nodes between different cloud domains. Visualizing and understanding the impact of this topology can easily be seen by utilizing TruFlow in conjunction with Network Watcher. Upon capturing packets utilizing Network Watcher at 4 locations with active traffic and utilizing the spatial map view of TruFlow’s UI, it is easy to see the latency and hence, performance impact of utilizing the Jolata office as a transit node.
 As you can see there is excess latency going through the transit node due to WAN bandwidth bottlenecks. One solution could be to increase the WAN bandwidth. The other solution could be to directly connect multiple cloud domains with a VNet. When utilizing VNet, there is a significant decrease in network latency that would result in an increase in application performance.
 </p>
               <div style="text-align: center;"><img src="../assets/img/azure_4.png" alt=""> <br>  Figure 4 </div> <br>
     <p>
-Use case #2: Elephant flow control
+      <strong>Usecase #2: Elephant flow control</strong>
 <br>
 Often you have applications that can misbehave by consuming too much bandwidth for a given period of time, dubbed an “elephant flow”. These flows are disruptive to the other applications trying to use the network and can cause excess latency to build-up resulting in application performance issues. TruFlow can see these elephant flows in real-time and enabling them to be identified and blocked. Figure below illustrates.
 </p>
