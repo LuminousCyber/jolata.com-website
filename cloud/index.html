@@ -51,7 +51,7 @@
   <section id="rt-solve" class="secrow"> 
       <div class="container">
           <div class="row">
-              <div class="desc col-md-5">
+              <div class="desc">
                   <h3 class="title-med">Jolata Azure Cloud Network Analytics</h3>
 <p>
 As enterprises move to digitize their business to stay competitive in the market, application needs exponentially increase in diversity, scale, and require an ever evolving set of infrastructure and flexibility. Public cloud providers, such as Microsoft Azure, solve this problem by providing a scalable and flexible infrastructure for enterprise applications. Some enterprise applications are very security sensitive, so maintaining the on-premise Data Center is also required. This leads to a hybrid cloud architecture in which applications span on-premise to public cloud domains.
@@ -63,7 +63,7 @@ Since the applications are the key drivers for new revenue streams as opposed to
 The traditional way for customers to get visibility is to collect packet captures and use tools such as Wireshark to try to debug issues.  Or they utilize homegrown tools that process packet capture files. If you only need to troubleshoot a single location, then a single packet capture from a given location can be analyzed. However, since applications have become distributed across many different VMs located almost anywhere (office, data center, cloud), it is virtually impossible to pin-point a problem to a specific packet capture from a specific VM at a specific time. 
 </p>
 <p>
-The ideal way to troubleshoot a problem is to synchronize captures across the VMs and sites, then correlate those captures to see the traffic across an entire network for all the applications. Up until now, there have been huge technical challenges to obtaining, synchronizing and correlating packet captures across different locations in the cloud. Without direct access to the host’s network interfaces, packets are reassembled into each VM differently. This means you cannot correlate traffic between VMs using Wireshark as in the Figure 1:
+The ideal way to troubleshoot a problem is to synchronize captures across the VMs and sites, then correlate those captures to see the traffic across an entire network for all the applications. Up until now, there have been huge technical challenges to obtaining, synchronizing and correlating packet captures across different locations in the cloud. Without direct access to the host’s network interfaces, packets are reassembled into each VM differently. This means you cannot correlate traffic between VMs using Wireshark as in Figure 1:
       </p>
                 <p>
           
@@ -110,7 +110,7 @@ As you can see there is excess latency going through the transit node due to WAN
     <p>
 Use case #2: Elephant flow control
 
-Often you have applications that can misbehave by consuming too much bandwidth for a given period of time, dubbed an “elephant flow”. These flows are disruptive to the other applications trying to use the network and can cause excess latency to build-up resulting in application performance issues. TruFlow can see these elephant flows in real-time and enabling them to be identified and blocked. The figure below illustrates.
+Often you have applications that can misbehave by consuming too much bandwidth for a given period of time, dubbed an “elephant flow”. These flows are disruptive to the other applications trying to use the network and can cause excess latency to build-up resulting in application performance issues. TruFlow can see these elephant flows in real-time and enabling them to be identified and blocked. Figure below illustrates.
 </p>
                                       <figure ><img src="../assets/img/azure_5.png" alt="">  Figure 5 -> Use Case 2</figure>
  <p>
